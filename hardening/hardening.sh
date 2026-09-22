@@ -108,7 +108,7 @@ control_uid0() {
 # grep -qx 'PermitRootLogin no' "$real" busca esa línea exacta dentro del archivo, pero sin imprimir nada — solo importa si la encontró o no (a través del código de salida).
 control_ssh() {
   local target="/etc/ssh/sshd_config.d/99-tp2-hardening.conf"
-  local content="PermitRootLogin no\n"
+  local content=$'PermitRootLogin no\n'
   real="$(path "$target")"
 
   if [[ "$MODE" == "--check" ]]; then
@@ -158,7 +158,7 @@ control_ssh() {
 
 control_pwquality() {
   local target="/etc/security/pwquality.conf.d/99-tp2-hardening.conf"
-  local content="minlen = 12\nminclass = 3\nmaxrepeat = 3\n"
+  local content=$'minlen = 12\nminclass = 3\nmaxrepeat = 3\n'
   local pam_file="/etc/pam.d/common-password"
   real="$(path "$target")"
 
@@ -206,7 +206,7 @@ control_pwquality() {
 
 control_umask() {
   local target="/etc/profile.d/99-tp2-hardening.sh"
-  local content="umask 027\n"
+  local content=$'umask 027\n'
   real="$(path "$target")"
 
   if [[ "$MODE" == "--check" ]]; then
@@ -242,7 +242,7 @@ control_umask() {
 
 control_sysctl() {
   local target="/etc/sysctl.d/99-tp2-hardening.conf"
-  local content="fs.protected_hardlinks=1\nfs.protected_symlinks=1\n"
+  local content=$'fs.protected_hardlinks=1\nfs.protected_symlinks=1\n'
   real="$(path "$target")"
 
   if [[ "$MODE" == "--check" ]]; then
