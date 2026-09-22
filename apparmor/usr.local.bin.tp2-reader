@@ -1,0 +1,16 @@
+#include <tunables/global>
+
+/usr/local/bin/tp2-reader flags=(attach_disconnected) {
+  #include <abstractions/base>
+
+  # Permitir la ejecucion y mapeo del propio binario
+  /usr/local/bin/tp2-reader mr,
+
+  # Permitir la lectura del archivo publico
+  /srv/tp2/datos/publico.txt r,
+
+  # Acceso a confidencial.txt omitido deliberadamente:
+  # AppArmor opera bajo lista blanca (default-deny). Al no otorgar regla de lectura,
+  # el recurso queda denegado sin necesidad de una regla 'deny' explicita, permitiendo
+  # registrar la advertencia en complain y bloquear la ejecucion en enforce.
+}
