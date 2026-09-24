@@ -1,0 +1,20 @@
+----
+time->Thu Sep 24 19:41:39 2026
+type=PROCTITLE msg=audit(1790289699.584:531): proctitle=746565002D61002F7372762F7470322F6461746F732F7075626C69636F2E747874
+type=PATH msg=audit(1790289699.584:531): item=1 name="/srv/tp2/datos/publico.txt" inode=1053316 dev=08:01 mode=0100640 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790289699.584:531): item=0 name="/srv/tp2/datos/" inode=1053308 dev=08:01 mode=040755 ouid=0 ogid=0 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1790289699.584:531): cwd="/home/alumno/Descargas/tp2/codigo_base"
+type=SYSCALL msg=audit(1790289699.584:531): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7ffeb45fc7c4 a2=441 a3=1b6 items=2 ppid=23968 pid=23969 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=1 comm="tee" exe="/usr/bin/tee" key="tp2_datos"
+----
+time->Thu Sep 24 19:47:41 2026
+type=PROCTITLE msg=audit(1790290061.654:544): proctitle=746565002D61002F7372762F7470322F6461746F732F7075626C69636F2E747874
+type=PATH msg=audit(1790290061.654:544): item=1 name="/srv/tp2/datos/publico.txt" inode=1053316 dev=08:01 mode=0100640 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790290061.654:544): item=0 name="/srv/tp2/datos/" inode=1053308 dev=08:01 mode=040755 ouid=0 ogid=0 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1790290061.654:544): cwd="/home/alumno/Descargas/tp2/codigo_base"
+type=SYSCALL msg=audit(1790290061.654:544): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7ffd5d9df7c4 a2=441 a3=1b6 items=2 ppid=24000 pid=24001 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=1 comm="tee" exe="/usr/bin/tee" key="tp2_datos"
+----
+time->Thu Sep 24 19:47:54 2026
+type=PROCTITLE msg=audit(1790290074.334:551): proctitle=63686D6F640030363430002F7372762F7470322F6461746F732F7075626C69636F2E747874
+type=PATH msg=audit(1790290074.334:551): item=0 name="/srv/tp2/datos/publico.txt" inode=1053316 dev=08:01 mode=0100640 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1790290074.334:551): cwd="/home/alumno/Descargas/tp2/codigo_base"
+type=SYSCALL msg=audit(1790290074.334:551): arch=c000003e syscall=268 success=yes exit=0 a0=ffffff9c a1=55ee92107500 a2=1a0 a3=fff items=1 ppid=24002 pid=24003 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=1 comm="chmod" exe="/usr/bin/chmod" key="tp2_datos"

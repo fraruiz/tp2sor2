@@ -1,0 +1,8 @@
+----
+time->Thu Sep 24 19:10:19 2026
+type=PROCTITLE msg=audit(1790287819.335:452): proctitle=2F7573722F6C6F63616C2F62696E2F7470322D6576656E7400636F7272656C6163696F6E5F64656D6F5F31373930323837383139
+type=PATH msg=audit(1790287819.335:452): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=923551 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790287819.335:452): item=0 name="/usr/local/bin/tp2-event" inode=1053322 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1790287819.335:452): cwd="/home/alumno/Descargas/tp2/codigo_base"
+type=EXECVE msg=audit(1790287819.335:452): argc=2 a0="/usr/local/bin/tp2-event" a1="correlacion_demo_1790287819"
+type=SYSCALL msg=audit(1790287819.335:452): arch=c000003e syscall=59 success=yes exit=0 a0=7ffe500c4ac0 a1=7ffe500c5e08 a2=7ffe500c5e20 a3=7fbe2cc54740 items=2 ppid=23512 pid=23515 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=1 comm="tp2-event" exe="/usr/local/bin/tp2-event" key="tp2_exec"

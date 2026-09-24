@@ -1,0 +1,6 @@
+fecha=2026-09-24T16:53:10-03:00
+host=alumno-virtualbox
+kernel=5.4.0-70-generic
+os=PRETTY_NAME="Ubuntu 20.04.2 LTS"
+apparmor=apparmor module is loaded.;28 profiles are loaded.;26 profiles are in enforce mode.;
+audit_status=enabled 1;failure 1;pid 4528;rate_limit 0;backlog_limit 8192;lost 0;backlog 0;backlog_wait_time 0;loginuid_immutable 0 unlocked;

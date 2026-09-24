@@ -1,0 +1,2 @@
+-w /srv/tp2/datos -p wa -k tp2_datos
+-a always,exit -F arch=b64 -S execve -F path=/usr/local/bin/tp2-event -F key=tp2_exec
