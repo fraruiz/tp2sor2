@@ -1,0 +1,64 @@
+Start timestamp: 2026-09-26 04:19:57 +0000 (AIDE 0.18.6)
+AIDE found differences between database and filesystem!!
+
+Summary:
+  Total number of entries:	5
+  Added entries:		1
+  Removed entries:		0
+  Changed entries:		2
+
+---------------------------------------------------
+Added entries:
+---------------------------------------------------
+
+f+++++++++++++++++: /srv/tp2/datos/nuevo_archivo.txt
+
+---------------------------------------------------
+Changed entries:
+---------------------------------------------------
+
+f = p..   . .A    : /srv/tp2/datos/confidencial.txt
+f > ...   . H.    : /srv/tp2/datos/publico.txt
+
+---------------------------------------------------
+Detailed information about changes:
+---------------------------------------------------
+
+File: /srv/tp2/datos/confidencial.txt
+ Perm      : -rw-r--r--                       | -rw-r-----
+ ACL       : A: user::rw-                     | A: user::rw-
+             A: group::r--                    | A: group::r--
+             A: other::r--                    | A: other::---
+
+File: /srv/tp2/datos/publico.txt
+ Size      : 58                               | 90
+ SHA256    : E2KNvjylpgtXS1KwjRl05dCyF6E8jzHH | FJGtJM6GTUCZvEBnpH9rHlqvXDd8fwtg
+             t7vekpZGjsg=                     | pMiKSWgpEfU=
+
+
+---------------------------------------------------
+The attributes of the (uncompressed) database(s):
+---------------------------------------------------
+
+/srv/tp2/aide/aide.db
+ MD5       : h/K18R0leTGFPa2wfe9wnQ==
+ SHA1      : BsiC8AkD95y3TsUn8VrLgn1xbP0=
+ SHA256    : zZn0+jWfR2A6Q7dggLBcLnbbPERIir0v
+             Ua5J8f5bvIA=
+ SHA512    : IhrAIXPfLzWDuzdlYY7gXYQmYc7LYJzj
+             7YF8Em/MQoskr6rNWf2TP1wcOSup5IP3
+             +l9qVl2E8uYIrZKCXKDpNg==
+ RMD160    : M7BEyhEvPwYfTvNRkgUmIRJ9h8U=
+ TIGER     : Du5eyVndogo9pTbjVaiH+3c2IWxemBiH
+ CRC32     : RV28bg==
+ CRC32B    : 5Ql+uw==
+ HAVAL     : +3FwOBCyZbt8ULl5IKG6U9o4M41BF/LH
+             XKCw+zXyGEQ=
+ WHIRLPOOL : lkOl3cLzPCpvophyYjcQzqLiAguQ7Pg9
+             7/DbAWXf3x/YHvOsG/LEmziCkOSFpttZ
+             2KLq+l4yjONCykwalkWe0Q==
+ GOST      : HJJbEf2C+MlzmDEKDPtdfazfthRV6uhy
+             KOxTkCFV8f8=
+
+
+End timestamp: 2026-09-26 04:19:57 +0000 (run time: 0m 0s)

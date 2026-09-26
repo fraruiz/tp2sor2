@@ -1,0 +1,10 @@
+Base AIDE generada: 2026-09-26T04:37:32+00:00
+total 24
+drwxr-xr-x 2 root root 4096 Sep 26 04:13 .
+drwxr-xr-x 6 root root 4096 Sep 26 03:37 ..
+-rw-r----- 1 root root   58 Sep 26 03:37 confidencial.txt
+-rw-r--r-- 1 root root   69 Sep 26 03:37 eventos.log
+-rw-r--r-- 1 root root   32 Sep 26 04:13 nuevo_archivo.txt
+-rw-r--r-- 1 root root   90 Sep 26 04:15 publico.txt
+total 4.0K
+-rw------- 1 root root 772 Sep 26 04:03 aide.db
