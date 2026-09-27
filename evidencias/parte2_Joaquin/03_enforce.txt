@@ -1,0 +1,17 @@
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$ sudo aa-enforce /usr/local/bin/tp2-reader
+Setting /usr/local/bin/tp2-reader to enforce mode.
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$ sudo grep tp2 /sys/kernel/security/apparmor/profiles
+/usr/local/bin/tp2-reader (enforce)
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$ /usr/local/bin/tp2-reader /srv/tp2/datos/publico.txt
+Este archivo puede ser leido por la aplicacion de prueba.
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$ /usr/local/bin/tp2-reader /srv/tp2/datos/confidencial.txt
+tp2-reader: no se pudo abrir '/srv/tp2/datos/confidencial.txt': Permission denied
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$ sudo /usr/local/bin/tp2-reader /srv/tp2/datos/confidencial.txt
+tp2-reader: no se pudo abrir '/srv/tp2/datos/confidencial.txt': Permission denied
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$ sudo grep DENIED /var/log/audit/audit.log | grep confidencial | tail -n 3
+type=AVC msg=audit(1790525109.426:291): apparmor="DENIED" operation="open" profile="/usr/local/bin/tp2-reader" name="/srv/tp2/datos/confidencial.txt" pid=2640 comm="tp2-reader" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+type=AVC msg=audit(1790528463.684:461): apparmor="DENIED" operation="open" profile="/usr/local/bin/tp2-reader" name="/srv/tp2/datos/confidencial.txt" pid=3318 comm="tp2-reader" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+type=AVC msg=audit(1790528466.728:466): apparmor="DENIED" operation="open" profile="/usr/local/bin/tp2-reader" name="/srv/tp2/datos/confidencial.txt" pid=3320 comm="tp2-reader" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$
+
+

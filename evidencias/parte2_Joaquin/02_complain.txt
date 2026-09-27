@@ -1,0 +1,21 @@
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$ sudo cp apparmor/usr.local.bin.tp2-reader /etc/apparmor.d/usr.local.bin.tp2-reader
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$ sudo apparmor_parser -Q /etc/apparmor.d/usr.local.bin.tp2-reader
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$ sudo apparmor_parser -r /etc/apparmor.d/usr.local.bin.tp2-reader
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$ sudo aa-complain /usr/local/bin/tp2-reader
+Estableciendo /usr/local/bin/tp2-reader al modo reclamar.
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$ sudo grep tp2 /sys/kernel/security/apparmor/profiles
+/usr/local/bin/tp2-reader (complain)
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$ /usr/local/bin/tp2-reader /srv/tp2/datos/publico.txt
+Este archivo puede ser leido por la aplicacion de prueba.
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$ /usr/local/bin/tp2-reader /srv/tp2/datos/confidencial.txt
+RECURSO CONTROLADO DEL TP2. No contiene informacion real.
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$ sudo grep ALLOWED /var/log/audit/audit.log | grep confidencial | tail -n 2
+type=AVC msg=audit(1790525099.503:254): apparmor="ALLOWED" operation="open" profile="/usr/local/bin/tp2-reader" name="/srv/tp2/datos/confidencial.txt" pid=2617 comm="tp2-reader" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+type=AVC msg=audit(1790528416.521:435): apparmor="ALLOWED" operation="open" profile="/usr/local/bin/tp2-reader" name="/srv/tp2/datos/confidencial.txt" pid=3302 comm="tp2-reader" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$ sudo journalctl -k --since "-10 minutes" --no-pager | grep -i apparmor
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$
+
+
+
+
+

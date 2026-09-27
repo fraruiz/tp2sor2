@@ -1,0 +1,19 @@
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$ sudo grep tp2 /sys/kernel/security/apparmor/profiles
+l.txt
+id
+/usr/local/bin/tp2-reader /srv/tp2/datos/publico.txt
+/usr/local/bin/tp2-reader /srv/tp2alumno@alumno-virtualbox:~/Desktop/tp2sor2$ ls -l /srv/tp2/datos/publico.txt /srv/tp2/datos/confidencial.txt
+-rw-r--r-- 1 root root 58 sep 21 21:16 /srv/tp2/datos/confidencial.txt
+-rw-r--r-- 1 root root 58 sep 21 21:16 /srv/tp2/datos/publico.txt
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$ id
+uid=1000(alumno) gid=1001(alumno) grupos=1001(alumno),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),119(lpadmin),130(wireshark),1000(sambashare)
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$ /usr/local/bin/tp2-reader /srv/tp2/datos/publico.txt
+Este archivo puede ser leido por la aplicacion de prueba.
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$ /usr/local/bin/tp2-reader /srv/tp2/datos/confidencial.txt
+RECURSO CONTROLADO DEL TP2. No contiene informacion real.
+alumno@alumno-virtualbox:~/Desktop/tp2sor2$
+
+
+
+
+
