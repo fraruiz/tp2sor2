@@ -4,15 +4,16 @@ Parte 1 (Hardening guiado) - Guia de la carpeta de evidencias
 
 Todo se corrio en la VM alumno-virtualbox con el usuario alumno, desde
 la raiz del repo (~/tp2sor2), el 2026-09-30 entre las 22:40 y las 22:44.
-Cada .png es la captura de la terminal con el comando y su salida.
-Las capturas estan numeradas en el orden en que se ejecutaron.
+Cada .txt es lo que se copio de la terminal (comandos y salidas) y el
+.png con el mismo numero es la captura de esa misma pantalla.
+Estan numerados en el orden en que se ejecutaron.
 
 Cada linea de salida tiene el formato que escribe el script en
 /var/log/tp2-hardening.log: fecha, estado (CHECK, APPLIED, SKIPPED,
 ERROR, RESUMEN), control y mensaje.
 
 
-01_sin_hardening (.png)
+01_sin_hardening (.txt y .png)
 Que es: un intento previo de correr --check, --apply y --restore.
 Que muestra:
   - Los tres dan "sudo: ./hardening/hardening.sh: orden no encontrada".
@@ -21,7 +22,7 @@ Que muestra:
   - El script no llego a ejecutarse, por lo tanto no se modifico nada
     del sistema. No aporta al informe; el estado inicial real es el 02.
 
-02_hardening_check (.png)
+02_hardening_check (.txt y .png)
 Que es: --check antes de aplicar el hardening (22:40:37).
 Que muestra:
   - UID0 en CHECK: solo root tiene UID 0.
@@ -30,7 +31,7 @@ Que muestra:
   - Resumen: Aplicados=0 Omitidos=0 Verificados=1 Errores=4.
   - --check solo informa: Aplicados=0, no crea ni modifica archivos.
 
-03_hardening_apply (.png)
+03_hardening_apply (.txt y .png)
 Que es: primera ejecucion de --apply (22:41:57).
 Que muestra:
   - Los cuatro controles en APPLIED. Se crean:
@@ -44,7 +45,7 @@ Que muestra:
   - UID0 sigue en CHECK: es un control de diagnostico, no corrige nada.
   - Resumen: Aplicados=4 Omitidos=0 Verificados=1 Errores=0.
 
-04_hardening_restore (.png)
+04_hardening_restore (.txt y .png)
 Que es: --restore despues del primer --apply (22:43:01).
 Que muestra:
   - Para cada fragmento, una linea RESTORE "Eliminado ... porque no
@@ -57,7 +58,7 @@ Que muestra:
     restore_file (RESTORE) y otra del propio control (SSH, PWQUALITY,
     UMASK, SYSCTL). Son 4 archivos restaurados, contados dos veces.
 
-05_hardening_idempotencia (.png)
+05_hardening_idempotencia (.txt y .png)
 Que es: dos ejecuciones seguidas de --apply despues del restore
 (22:44:08 y 22:44:12).
 Que muestra:

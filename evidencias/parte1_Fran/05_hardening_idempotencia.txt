@@ -1,0 +1,14 @@
+alumno@alumno-virtualbox:~/tp2sor2$ sudo ./hardening/hardening.sh --apply
+2026-09-30T22:44:08-03:00 [CHECK] [UID0] Solo root posee UID 0
+2026-09-30T22:44:08-03:00 [APPLIED] [SSH] Creado/actualizado /etc/ssh/sshd_config.d/99-tp2-hardening.conf y ssh recargado
+2026-09-30T22:44:08-03:00 [APPLIED] [PWQUALITY] Creado/actualizado /etc/security/pwquality.conf.d/99-tp2-hardening.conf
+2026-09-30T22:44:08-03:00 [APPLIED] [UMASK] Creado/actualizado /etc/profile.d/99-tp2-hardening.sh
+2026-09-30T22:44:08-03:00 [APPLIED] [SYSCTL] Creado/actualizado /etc/sysctl.d/99-tp2-hardening.conf y valores aplicados en caliente
+2026-09-30T22:44:08-03:00 [RESUMEN] [TP2] Aplicados=4 Omitidos=0 Verificados=1 Errores=0
+alumno@alumno-virtualbox:~/tp2sor2$ sudo ./hardening/hardening.sh --apply
+2026-09-30T22:44:12-03:00 [CHECK] [UID0] Solo root posee UID 0
+2026-09-30T22:44:12-03:00 [SKIPPED] [SSH] /etc/ssh/sshd_config.d/99-tp2-hardening.conf ya establece PermitRootLogin no
+2026-09-30T22:44:12-03:00 [SKIPPED] [PWQUALITY] /etc/security/pwquality.conf.d/99-tp2-hardening.conf ya establece la politica esperada
+2026-09-30T22:44:12-03:00 [SKIPPED] [UMASK] /etc/profile.d/99-tp2-hardening.sh ya establece umask 027
+2026-09-30T22:44:12-03:00 [SKIPPED] [SYSCTL] /etc/sysctl.d/99-tp2-hardening.conf ya fija ambos valores
+2026-09-30T22:44:12-03:00 [RESUMEN] [TP2] Aplicados=0 Omitidos=4 Verificados=1 Errores=0

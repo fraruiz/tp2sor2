@@ -1,0 +1,8 @@
+alumno@alumno-virtualbox:~/tp2sor2$ sudo ./hardening/hardening.sh --check
+2026-09-30T22:40:37-03:00 [CHECK] [UID0] Solo root posee UID 0
+2026-09-30T22:40:37-03:00 [ERROR] [SSH] Archivo /etc/ssh/sshd_config.d/99-tp2-hardening.conf no existe
+2026-09-30T22:40:37-03:00 [ERROR] [PWQUALITY] Archivo /etc/security/pwquality.conf.d/99-tp2-hardening.conf no existe
+2026-09-30T22:40:37-03:00 [ERROR] [UMASK] Archivo /etc/profile.d/99-tp2-hardening.sh no existe
+2026-09-30T22:40:37-03:00 [ERROR] [SYSCTL] Archivo /etc/sysctl.d/99-tp2-hardening.conf no existe
+2026-09-30T22:40:37-03:00 [RESUMEN] [TP2] Aplicados=0 Omitidos=0 Verificados=1 Errores=4
+alumno@alumno-virtualbox:~/tp2sor2$ 

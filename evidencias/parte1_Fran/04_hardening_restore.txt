@@ -1,0 +1,11 @@
+alumno@alumno-virtualbox:~/tp2sor2$ sudo ./hardening/hardening.sh --restore
+2026-09-30T22:43:01-03:00 [CHECK] [UID0] Solo root posee UID 0
+2026-09-30T22:43:01-03:00 [APPLIED] [RESTORE] Eliminado /etc/ssh/sshd_config.d/99-tp2-hardening.conf porque no existia antes del TP
+2026-09-30T22:43:01-03:00 [APPLIED] [SSH] Restaurado /etc/ssh/sshd_config.d/99-tp2-hardening.conf y ssh recargado
+2026-09-30T22:43:01-03:00 [APPLIED] [RESTORE] Eliminado /etc/security/pwquality.conf.d/99-tp2-hardening.conf porque no existia antes del TP
+2026-09-30T22:43:01-03:00 [APPLIED] [PWQUALITY] Restaurado /etc/security/pwquality.conf.d/99-tp2-hardening.conf
+2026-09-30T22:43:01-03:00 [APPLIED] [RESTORE] Eliminado /etc/profile.d/99-tp2-hardening.sh porque no existia antes del TP
+2026-09-30T22:43:01-03:00 [APPLIED] [UMASK] Restaurado /etc/profile.d/99-tp2-hardening.sh
+2026-09-30T22:43:01-03:00 [APPLIED] [RESTORE] Eliminado /etc/sysctl.d/99-tp2-hardening.conf porque no existia antes del TP
+2026-09-30T22:43:01-03:00 [APPLIED] [SYSCTL] Restaurado /etc/sysctl.d/99-tp2-hardening.conf
+2026-09-30T22:43:01-03:00 [RESUMEN] [TP2] Aplicados=8 Omitidos=0 Verificados=1 Errores=0

@@ -1,0 +1,6 @@
+alumno@alumno-virtualbox:~/tpsor2$ sudo ./hardening/hardening.sh --check
+sudo: ./hardening/hardening.sh: orden no encontrada
+alumno@alumno-virtualbox:~/tpsor2$ sudo ./hardening/hardening.sh --apply
+sudo: ./hardening/hardening.sh: orden no encontrada
+alumno@alumno-virtualbox:~/tpsor2$ sudo ./hardening/hardening.sh --restore
+sudo: ./hardening/hardening.sh: orden no encontrada
