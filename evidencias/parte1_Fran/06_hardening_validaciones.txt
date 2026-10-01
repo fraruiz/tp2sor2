@@ -1,0 +1,28 @@
+alumno@alumno-virtualbox:~/tp2sor2$ cat /etc/ssh/sshd_config.d/99-tp2-hardening.conf
+PermitRootLogin no
+alumno@alumno-virtualbox:~/tp2sor2$ sudo sshd -t && sudo sshd -T | grep -i permitrootlogin
+permitrootlogin no
+alumno@alumno-virtualbox:~/tp2sor2$ cat /etc/security/pwquality.conf.d/99-tp2-hardening.conf
+minlen = 12
+minclass = 3
+maxrepeat = 3
+alumno@alumno-virtualbox:~/tp2sor2$ grep pam_pwquality /etc/pam.d/common-password
+password    requisite            pam_pwquality.so retry=3
+alumno@alumno-virtualbox:~/tp2sor2$ cat /etc/profile.d/99-tp2-hardening.sh
+umask 027
+alumno@alumno-virtualbox:~/tp2sor2$ bash -lc 'umask; rm -f /tmp/tp2_umask; touch /tmp/tp2_umask; ls -l /tmp/tp2_umask'
+0027
+-rw-r----- 1 alumno alumno 0 sep 30 23:09 /tmp/tp2_umask
+alumno@alumno-virtualbox:~/tp2sor2$ cat /etc/sysctl.d/99-tp2-hardening.conf
+fs.protected_hardlinks=1
+fs.protected_symlinks=1
+alumno@alumno-virtualbox:~/tp2sor2$ sysctl fs.protected_hardlinks fs.protected_symlinks
+sysctl: permiso denegado para la clave «fs.protected_hardlinks»
+sysctl: permiso denegado para la clave «fs.protected_symlinks»
+alumno@alumno-virtualbox:~/tp2sor2$ sudo ./hardening/hardening.sh --check
+2026-09-30T23:09:26-03:00 [CHECK] [UID0] Solo root posee UID 0
+2026-09-30T23:09:26-03:00 [CHECK] [SSH] Archivo /etc/ssh/sshd_config.d/99-tp2-hardening.conf existe y contiene PermitRootLogin no
+2026-09-30T23:09:26-03:00 [CHECK] [PWQUALITY] pam_pwquality activo y /etc/security/pwquality.conf.d/99-tp2-hardening.conf contiene la politica esperada
+2026-09-30T23:09:26-03:00 [CHECK] [UMASK] Archivo /etc/profile.d/99-tp2-hardening.sh existe y contiene umask 027
+2026-09-30T23:09:26-03:00 [CHECK] [SYSCTL] Archivo /etc/sysctl.d/99-tp2-hardening.conf correcto y valores efectivos del kernel en 1
+2026-09-30T23:09:26-03:00 [RESUMEN] [TP2] Aplicados=0 Omitidos=0 Verificados=5 Errores=0

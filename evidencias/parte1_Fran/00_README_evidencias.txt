@@ -71,14 +71,45 @@ Que muestra:
   - En las dos, Errores=0.
   - La VM quedo con el hardening aplicado al terminar esta captura.
 
+06_hardening_validaciones (.txt y .png)
+Que es: contenido de los cuatro fragmentos y comprobacion de su efecto,
+con el hardening aplicado (23:09).
+Que muestra:
+  - SSH: el fragmento contiene "PermitRootLogin no". sshd -t no da
+    errores y sshd -T (configuracion efectiva, ya con todos los
+    fragmentos combinados) devuelve "permitrootlogin no".
+  - PWQUALITY: el fragmento fija minlen = 12, minclass = 3 y
+    maxrepeat = 3, y /etc/pam.d/common-password tiene la linea de
+    pam_pwquality.so, o sea que el modulo que lee esa politica esta
+    activo.
+  - UMASK: el fragmento contiene "umask 027". En una sesion de login
+    nueva (bash -l) la mascara es 0027 y un archivo recien creado queda
+    -rw-r----- (0640): sin ningun permiso para "otros".
+  - SYSCTL: el fragmento fija fs.protected_hardlinks=1 y
+    fs.protected_symlinks=1. El sysctl que sigue da "permiso denegado"
+    porque se corrio sin sudo y esas dos claves solo las puede leer
+    root; no es una falla del hardening. Los valores efectivos los
+    confirma el --check de abajo, que corre como root: "valores
+    efectivos del kernel en 1".
+  - --check final: los cinco controles en CHECK,
+    Aplicados=0 Omitidos=0 Verificados=5 Errores=0. Es el mismo comando
+    que en el 02 daba Errores=4.
+
 
 Donde buscar cada cosa para el informe
 ---------------------------------------
 - Salida de --check antes del hardening: 02.
 - Primera y segunda ejecucion de --apply: 03 y 05 (el 05 tiene las dos
   juntas en una misma captura).
+- Fragmentos creados y validaciones realizadas: 06.
 - Demostracion de que --restore funciona: 04, mas la primera ejecucion
   del 05 (vuelve a aplicar todo porque los fragmentos ya no estaban).
+- Analisis 1 (un control, riesgo que reduce y como se comprobo): el 06
+  tiene la comprobacion de los cuatro. Los mas directos son SSH (sshd -T
+  muestra la configuracion efectiva: root no puede entrar por SSH, hay
+  que entrar con un usuario comun y escalar con sudo) y UMASK (el
+  archivo nuevo queda 0640, "otros" no lo puede leer). Comparar con el
+  02, donde esos mismos controles estaban en ERROR.
 - Analisis 2 (idempotencia): comparar las dos ejecuciones del 05. Mismo
   comando, mismo estado final; la primera aplica lo que falta
   (Aplicados=4) y la segunda detecta que no hay nada que cambiar
