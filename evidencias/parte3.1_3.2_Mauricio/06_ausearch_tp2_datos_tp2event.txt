@@ -1,0 +1,7 @@
+----
+time->Thu Sep 24 19:10:19 2026
+type=PROCTITLE msg=audit(1790287819.347:453): proctitle=2F7573722F6C6F63616C2F62696E2F7470322D6576656E7400636F7272656C6163696F6E5F64656D6F5F31373930323837383139
+type=PATH msg=audit(1790287819.347:453): item=1 name="/srv/tp2/datos/eventos.log" inode=1053318 dev=08:01 mode=0100644 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1790287819.347:453): item=0 name="/srv/tp2/datos/" inode=1053308 dev=08:01 mode=040755 ouid=0 ogid=0 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1790287819.347:453): cwd="/home/alumno/Descargas/tp2/codigo_base"
+type=SYSCALL msg=audit(1790287819.347:453): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=5628f4125019 a2=441 a3=1b6 items=2 ppid=23512 pid=23515 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=1 comm="tp2-event" exe="/usr/local/bin/tp2-event" key="tp2_datos"

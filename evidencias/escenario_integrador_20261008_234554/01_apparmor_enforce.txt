@@ -1,0 +1,6 @@
+$ apparmor_parser -Q /etc/apparmor.d/usr.local.bin.tp2-reader
+(sintaxis OK)
+$ aa-enforce /usr/local/bin/tp2-reader
+Setting /usr/local/bin/tp2-reader to enforce mode.
+$ grep tp2 /sys/kernel/security/apparmor/profiles
+/usr/local/bin/tp2-reader (enforce)

@@ -1,0 +1,34 @@
+$ aide --config=/srv/tp2/config/aide.conf --init
+Start timestamp: 2026-10-09 00:03:27 -0300 (AIDE 0.16.1)
+AIDE initialized database at /srv/tp2/aide/aide.db.new
+
+Number of entries:	4
+
+---------------------------------------------------
+The attributes of the (uncompressed) database(s):
+---------------------------------------------------
+
+/srv/tp2/aide/aide.db.new
+  MD5      : uLOGuNv3X/WEXMXWP3TQ7w==
+  SHA1     : B+EQOnensCWvNi6+AzSOI8FHW5U=
+  RMD160   : akU+LK4lBriBZrzWbUshXKOPKiA=
+  TIGER    : 7GJB1J1+ynqrZXoV3/6YrwhvkL/ib46R
+  SHA256   : /C+t7ozgAVYZf5IWPxdwEsGpAFUOy/1e
+             FVcm9Pji1fs=
+  SHA512   : RLgUQ6kKBXmglKLY4Xz8cNQk5LJ+O8jz
+             Woj2o7NWat7KGDk0jQCcATYDheOcNIaN
+             /XVQ3A6mDOL2Qmyx/sL4XA==
+  CRC32    : tNz+Iw==
+  HAVAL    : rmt+7CeQ6rSqC/OQcmURPLQVGFyE2rV6
+             2/MGCyXCxQI=
+  GOST     : Kc9Jw3VBbgVIlcxI220y4RiyTwwzhh7p
+             6prr8Ns24ks=
+  WHIRLPOOL: PwYiicl1WH0kaUMUyoj5yxeVE4lGEEN/
+             DIhYwkcRm9xvu1+1kAhXWUH2ACkNR45s
+             f9cWGvkPTvaYO40L8HZu5A==
+
+
+End timestamp: 2026-10-09 00:03:27 -0300 (run time: 0m 0s)
+$ ls -l /srv/tp2/aide/
+total 4
+-rw------- 1 root root 915 oct  9 00:03 aide.db

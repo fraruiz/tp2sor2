@@ -1,0 +1,8 @@
+fecha:     2026-10-09T00:03:25-03:00
+host:      alumno-virtualbox
+sistema:   Ubuntu 20.04.2 LTS
+kernel:    5.4.0-70-generic
+aide:      Aide 0.16.1
+auditctl:  auditctl version 2.8.5
+auditd:    active
+apparmor:  apparmor module is loaded.

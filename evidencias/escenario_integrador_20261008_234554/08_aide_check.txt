@@ -1,0 +1,61 @@
+Start timestamp: 2026-10-09 00:03:32 -0300 (AIDE 0.16.1)
+AIDE found differences between database and filesystem!!
+
+Summary:
+  Total number of entries:	4
+  Added entries:		0
+  Removed entries:		0
+  Changed entries:		2
+
+---------------------------------------------------
+Changed entries:
+---------------------------------------------------
+
+f > ... mc. C.   : /srv/tp2/datos/eventos.log
+f > ... mc. C.   : /srv/tp2/datos/publico.txt
+
+---------------------------------------------------
+Detailed information about changes:
+---------------------------------------------------
+
+File: /srv/tp2/datos/eventos.log
+  Size     : 335                              | 421
+  Mtime    : 2026-09-24 19:10:19 -0300        | 2026-10-09 00:03:29 -0300
+  Ctime    : 2026-09-24 19:10:19 -0300        | 2026-10-09 00:03:29 -0300
+  SHA256   : rPp6iJ/FvJz3I0ZiVfh32SlzXuJjSsZu | lHelqX9RNapDwIioCxpdIORQmyLmUfTY
+             fB90+LdnsvE=                     | /FYNY7zTyzs=
+
+File: /srv/tp2/datos/publico.txt
+  Size     : 159                              | 193
+  Mtime    : 2026-09-24 19:47:41 -0300        | 2026-10-09 00:03:29 -0300
+  Ctime    : 2026-09-24 19:47:54 -0300        | 2026-10-09 00:03:29 -0300
+  SHA256   : YDCtmxqdU+U5dyjEELoiYsWsQP29bBVu | 7vHx/vpLASHwVHJXZRCgziLySBcCbARy
+             K+cZtEOd1+8=                     | EPe3evPSfiQ=
+
+
+---------------------------------------------------
+The attributes of the (uncompressed) database(s):
+---------------------------------------------------
+
+/srv/tp2/aide/aide.db
+  MD5      : uLOGuNv3X/WEXMXWP3TQ7w==
+  SHA1     : B+EQOnensCWvNi6+AzSOI8FHW5U=
+  RMD160   : akU+LK4lBriBZrzWbUshXKOPKiA=
+  TIGER    : 7GJB1J1+ynqrZXoV3/6YrwhvkL/ib46R
+  SHA256   : /C+t7ozgAVYZf5IWPxdwEsGpAFUOy/1e
+             FVcm9Pji1fs=
+  SHA512   : RLgUQ6kKBXmglKLY4Xz8cNQk5LJ+O8jz
+             Woj2o7NWat7KGDk0jQCcATYDheOcNIaN
+             /XVQ3A6mDOL2Qmyx/sL4XA==
+  CRC32    : tNz+Iw==
+  HAVAL    : rmt+7CeQ6rSqC/OQcmURPLQVGFyE2rV6
+             2/MGCyXCxQI=
+  GOST     : Kc9Jw3VBbgVIlcxI220y4RiyTwwzhh7p
+             6prr8Ns24ks=
+  WHIRLPOOL: PwYiicl1WH0kaUMUyoj5yxeVE4lGEEN/
+             DIhYwkcRm9xvu1+1kAhXWUH2ACkNR45s
+             f9cWGvkPTvaYO40L8HZu5A==
+
+
+End timestamp: 2026-10-09 00:03:32 -0300 (run time: 0m 0s)
+(codigo de salida de aide --check: 4)

@@ -1,0 +1,5 @@
+Eventos de AppArmor (AVC) desde el inicio del escenario:
+<no matches>
+
+Lineas crudas de audit.log:
+type=AVC msg=audit(1791515009.206:349): apparmor="DENIED" operation="open" profile="/usr/local/bin/tp2-reader" name="/srv/tp2/datos/confidencial.txt" pid=40788 comm="tp2-reader" requested_mask="r" denied_mask="r" fsuid=0 ouid=0

@@ -1,0 +1,30 @@
+$ augenrules --load
+/usr/sbin/augenrules: No change
+No rules
+enabled 1
+failure 1
+pid 375
+rate_limit 0
+backlog_limit 8192
+lost 0
+backlog 1
+backlog_wait_time 0
+enabled 1
+failure 1
+pid 375
+rate_limit 0
+backlog_limit 8192
+lost 0
+backlog 1
+backlog_wait_time 0
+enabled 1
+failure 1
+pid 375
+rate_limit 0
+backlog_limit 8192
+lost 0
+backlog 13
+backlog_wait_time 0
+$ auditctl -l | grep tp2_
+-w /srv/tp2/datos -p wa -k tp2_datos
+-a always,exit -F arch=b64 -S execve -F path=/usr/local/bin/tp2-event -F key=tp2_exec

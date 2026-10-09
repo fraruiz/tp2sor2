@@ -1,0 +1,18 @@
+Inicio del escenario: 2026-10-09T00:03:29-03:00
+=== 1. Lectura publica ===
+Este archivo puede ser leido por la aplicacion de prueba.
+linea de prueba
+linea de prueba
+linea de prueba
+linea de prueba
+prueba de escritura
+prueba combinada
+
+=== 2. Intento sobre recurso confidencial ===
+tp2-reader: no se pudo abrir '/srv/tp2/datos/confidencial.txt': Permission denied
+
+=== 3. Evento controlado ===
+Evento registrado en /srv/tp2/datos/eventos.log
+
+=== 4. Cambio controlado de integridad ===
+Escenario ejecutado. Reuna ahora evidencia de AppArmor, auditd y AIDE.

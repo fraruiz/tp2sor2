@@ -1,0 +1,24 @@
+----
+type=PROCTITLE msg=audit(09/10/26 00:03:27.110:341) : proctitle=/sbin/auditctl -R /etc/audit/audit.rules 
+type=SOCKADDR msg=audit(09/10/26 00:03:27.110:341) : saddr={ fam=netlink nlnk-fam=16 nlnk-pid=0 } 
+type=SYSCALL msg=audit(09/10/26 00:03:27.110:341) : arch=x86_64 syscall=sendto success=yes exit=1080 a0=0x3 a1=0x7ffc3f308590 a2=0x438 a3=0x0 items=0 ppid=40653 pid=40664 auid=alumno uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts0 ses=1 comm=auditctl exe=/usr/sbin/auditctl key=(null) 
+type=CONFIG_CHANGE msg=audit(09/10/26 00:03:27.110:341) : auid=alumno ses=1 op=remove_rule key=tp2_datos list=exit res=yes 
+----
+type=CONFIG_CHANGE msg=audit(09/10/26 00:03:27.110:345) : auid=alumno ses=1 op=add_rule key=tp2_datos list=exit res=yes 
+----
+type=PROCTITLE msg=audit(09/10/26 00:03:29.214:351) : proctitle=/usr/local/bin/tp2-event escenario_integrador_20261009_000329 
+type=PATH msg=audit(09/10/26 00:03:29.214:351) : item=1 name=/srv/tp2/datos/eventos.log inode=1053318 dev=08:01 mode=file,644 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(09/10/26 00:03:29.214:351) : item=0 name=/srv/tp2/datos/ inode=1053308 dev=08:01 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(09/10/26 00:03:29.214:351) : cwd=/home/alumno/Descargas/tp2sor2 
+type=SYSCALL msg=audit(09/10/26 00:03:29.214:351) : arch=x86_64 syscall=openat success=yes exit=3 a0=0xffffff9c a1=0x56291ce70019 a2=O_WRONLY|O_CREAT|O_APPEND a3=0x1b6 items=2 ppid=40785 pid=40789 auid=alumno uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts0 ses=1 comm=tp2-event exe=/usr/local/bin/tp2-event key=tp2_datos 
+----
+type=PROCTITLE msg=audit(09/10/26 00:03:29.214:352) : proctitle=bash scripts/escenario_final.sh 
+type=PATH msg=audit(09/10/26 00:03:29.214:352) : item=1 name=/srv/tp2/datos/publico.txt inode=1053316 dev=08:01 mode=file,640 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=PATH msg=audit(09/10/26 00:03:29.214:352) : item=0 name=/srv/tp2/datos/ inode=1053308 dev=08:01 mode=dir,755 ouid=root ogid=root rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(09/10/26 00:03:29.214:352) : cwd=/home/alumno/Descargas/tp2sor2 
+type=SYSCALL msg=audit(09/10/26 00:03:29.214:352) : arch=x86_64 syscall=openat success=yes exit=3 a0=0xffffff9c a1=0x561a7ca37260 a2=O_WRONLY|O_CREAT|O_APPEND a3=0x1b6 items=2 ppid=40781 pid=40785 auid=alumno uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts0 ses=1 comm=bash exe=/usr/bin/bash key=tp2_datos 
+----
+type=PROCTITLE msg=audit(09/10/26 00:03:29.218:353) : proctitle=chmod 0640 /srv/tp2/datos/publico.txt 
+type=PATH msg=audit(09/10/26 00:03:29.218:353) : item=0 name=/srv/tp2/datos/publico.txt inode=1053316 dev=08:01 mode=file,640 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 cap_frootid=0 
+type=CWD msg=audit(09/10/26 00:03:29.218:353) : cwd=/home/alumno/Descargas/tp2sor2 
+type=SYSCALL msg=audit(09/10/26 00:03:29.218:353) : arch=x86_64 syscall=fchmodat success=yes exit=0 a0=0xffffff9c a1=0x56484e591500 a2=0640 a3=0xfff items=1 ppid=40785 pid=40790 auid=alumno uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts0 ses=1 comm=chmod exe=/usr/bin/chmod key=tp2_datos 

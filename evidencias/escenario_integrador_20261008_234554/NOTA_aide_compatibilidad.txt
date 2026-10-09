@@ -1,0 +1,17 @@
+La version de AIDE de esta VM rechazo el aide.conf del repo:
+------------------------------------------------------------
+7:Error in expression:file
+Configuration error
+
+Se uso una copia compatible (/srv/tp2/config/aide.conf). Diferencias con el repo:
+------------------------------------------------------------
+7c7
+< database_in=file:/srv/tp2/aide/aide.db
+---
+> database=file:/srv/tp2/aide/aide.db
+11d10
+< report_level=changed_attributes
+17c16
+< TP2NORMAL = p+ftype+i+l+u+g+s+m+c+acl+sha256
+---
+> TP2NORMAL = p+i+l+u+g+s+m+c+acl+sha256
